@@ -609,7 +609,6 @@ $(document).ready(function(){
 
 </script>
 
-
 <script>
   // Fetch notices from the PHP backend and convert them into a JavaScript array
   const notices = @json($notices); // Use Blade's json function to convert PHP array to JS array
@@ -621,14 +620,14 @@ $(document).ready(function(){
     const detailsLinkElement = document.getElementById('details-link');
 
     if (notices.length === 0) {
-      noticeTextElement.innerText = "No notices available.";
+      noticeTextElement.innerHTML = "No notices available."; // Use innerHTML to handle HTML content
       detailsLinkElement.href = "#";
       return;
     }
 
     const currentNotice = notices[currentIndex];
 
-    noticeTextElement.innerText = currentNotice.content;
+    noticeTextElement.innerHTML = currentNotice.content; // Use innerHTML to render HTML tags
     detailsLinkElement.href = currentNotice.details_link; // Update link for the current notice
 
     currentIndex = (currentIndex + 1) % notices.length; // Cycle through notices
@@ -636,7 +635,7 @@ $(document).ready(function(){
 
   // Function to dismiss the notice
   function dismissNotice() {
-    document.getElementById('notice-text').innerText = "";
+    document.getElementById('notice-text').innerHTML = ""; // Clear the HTML content
     document.getElementById('details-link').href = "#";
   }
 

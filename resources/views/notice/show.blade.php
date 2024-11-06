@@ -203,7 +203,7 @@
 
         <div class="flex flex-1 flex-wrap justify-center items-center gap-x-4 gap-y-2">
             <p class="text-sm/6 text-gray-900  p-2 rounded">
-                <strong class="font-semibold">Notice: {{$notice->content}}</strong>
+                <strong class="font-semibold">Notice: {{ \Illuminate\Support\Str::limit(strip_tags($notice->content), 50) }}</strong>
                 <svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
                     <circle cx="1" cy="1" r="1" />
                 </svg>
@@ -246,7 +246,7 @@
                             {{ strtoupper($notice->title) }}
                         </h2>
                     </div>
-                    <p class="mt-6 text-pretty text-lg/8 text-gray-300">{{ $notice->content }}</p>
+                    <p class="mt-6 text-pretty text-lg/8 text-gray-300">{{ \Illuminate\Support\Str::limit(strip_tags($notice->content), 50) }}</p>
 
                     <p class="mt-6 text-pretty text-lg/8 text-gray-300">
                         Created on {{ \Carbon\Carbon::parse($notice->created_at)->format('F j, Y \a\t h:i A') }}
