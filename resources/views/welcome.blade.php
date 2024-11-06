@@ -214,23 +214,22 @@
         </button>
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div class="flex flex-shrink-0 items-center">
-          <img class="h-8 w-auto" src="" alt="Your Company">
+        <div class="flex flex-shrink-0 items-center mt-3">
+          <img class="h-12 w-auto" src="/images/iLab white Logo-01.png" alt="Your Company" style="max-width:250px;height:170px">
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
             <!-- <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
             <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
             <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a> -->
             <div class="relative" x-data="{ open: false }">
-  <button type="button" class="inline-flex items-center gap-x-1 text-sm font-semibold text-gray-900" @click="open = !open" aria-expanded="open">
-    <span style="color:white" class="py-2">Solutions</span>
-    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="color:white">
-      <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-    </svg>
-  </button>
+    <!-- <button type="button" class="inline-flex items-center gap-x-1 text-sm font-semibold text-gray-900" @click="open = !open" aria-expanded="open">
+        <span style="color:white" class="py-2">Solutions</span>
+        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="color:white">
+        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+        </svg>
+    </button> -->
 
   <div x-show="open" @click.away="open = false" class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
     <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm shadow-lg ring-1 ring-gray-900/5">
@@ -275,25 +274,23 @@
           </div>
         </div>
       </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 mb-2">
 
 
 
-        <a href="/login" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
+                    <a href="/login" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"><strong>Login</strong></a>
 
 
 
-           </div>
+                </div>
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="sm:hidden" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+      <a href="/" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
+      <a href="/login" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
     </div>
   </div>
 </nav>
@@ -327,37 +324,10 @@
 
 
 
-
-<div class="bg-white">
-  <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-3 lg:px-8">
-    <div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-      <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
-        <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
-        <defs>
-          <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-            <stop stop-color="darkblue" />
-            <stop offset="1" stop-color="#E935C1" />
-          </radialGradient>
-        </defs>
-      </svg>
-      <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-        <h2 class="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">Welcome to IlabAfrica Intranet</h2>
-        <p class="mt-6 text-pretty text-lg/8 text-gray-300">Enhance collaboration and streamline communication within our community. Explore our features and stay connected!</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-          <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" style="border-radius:30px;width:100%">Get Started</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-
 <div class="bg-gray-50 py-24 sm:py-3">
 
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-    <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 ">
+    <div class="grid gap-4 sm:mt-16 lg:grid-cols-3 ">
 
     <div class="p-6">
     <h2 class="text-2xl font-bold text-blue-600 mb-4">IlabAfrica Systems</h2> <!-- Title -->
