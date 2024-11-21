@@ -20,6 +20,12 @@ class Event extends Model
         'user_id', // Assuming you want to associate the event with a user
     ];
 
+
+    protected $casts = [
+        'start_time' => 'datetime',
+        'end_time' => 'datetime',
+    ];
+
     // Define the relationship with the User model
     public function user()
     {

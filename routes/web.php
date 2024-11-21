@@ -69,6 +69,8 @@ Route::get('/', function () {
     // Fetch all events from the database
     $events = Event::all(['id', 'title', 'start_time', 'end_time', 'organizers', 'venue']);
 
+    
+
     // Pass the notices, birthdays, and events to the 'welcome' view
     return view('welcome', compact('notices', 'birthdaysToday', 'events'));
 });
