@@ -20,7 +20,10 @@ use Carbon\Carbon;
 use App\Models\Notice;
 use App\Models\Birthday; // Make sure to import the User model
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\PhoneDirectory;
 use App\Models\Event;
+use Illuminate\Http\Request;
+use App\Models\Phone;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,7 +72,7 @@ Route::get('/', function () {
     // Fetch all events from the database
     $events = Event::all(['id', 'title', 'start_time', 'end_time', 'organizers', 'venue']);
 
-    
+
 
     // Pass the notices, birthdays, and events to the 'welcome' view
     return view('welcome', compact('notices', 'birthdaysToday', 'events'));
@@ -114,6 +117,28 @@ Route::get('/departments', function () {
     return view('Departments');
 });
 
+Route::get('/phone_directory', function (Request $request) {
+    $query = Phone::query();
+
+    // Apply search filter if search query exists
+    if ($request->has('search') && $request->search !== '') {
+        $query->where('name', 'like', '%' . $request->search . '%')
+              ->orWhere('extension', 'like', '%' . $request->search . '%');
+    }
+
+    // Apply department filter if selected
+    if ($request->has('department') && $request->department !== '') {
+        $query->where('department', $request->department);
+    }
+
+    // Get phones and unique departments
+    $phones = $query->get();
+    $departments = Phone::distinct()->pluck('department'); // Fetch all unique departments
+
+    return view('Phone', compact('phones', 'departments')); // Pass data to the view
+});
+
+
 
 
 Route::get('/department', function () {
@@ -124,6 +149,7 @@ Route::middleware(['auth'])->group(function () {
     // Resource routes for Notices and Birthdays
     Route::resource('notices', NoticeController::class);
     Route::resource('birthdays', BirthdayController::class);
+    Route::resource('phones', PhoneDirectory::class);
 
     Route::resource('events', EventController::class);
 });

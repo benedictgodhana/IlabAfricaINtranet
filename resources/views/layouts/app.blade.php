@@ -185,6 +185,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/phones" class="sidebar-link flex items-center {{ request()->is('phones') ? 'sidebar-active' : '' }}">
+                            <span class="fa fa-phone mr-3"></span> Phone Directory
+                        </a>
+                    </li>
+                    <li>
                         <a href="/settings" class="sidebar-link flex items-center {{ request()->is('settings') ? 'sidebar-active' : '' }}">
                             <span class="fa fa-cogs mr-3"></span> Settings
                         </a>

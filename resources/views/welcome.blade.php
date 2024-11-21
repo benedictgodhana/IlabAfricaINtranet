@@ -42,7 +42,7 @@
   <div class="container flex flex-wrap items-center justify-between mx-auto text-white ">
     <!-- Logo Section -->
     <a href="#" class="mr-4 block cursor-pointer py-1.5 text-base font-semibold">
-      <img src="/images/LOGO_2.png" alt="Logo" style="height:70px" />
+      <img src="/images/LOGO_2.png" alt="Logo" style="height:80px" />
     </a>
 
     <!-- Nav Links -->
@@ -72,7 +72,7 @@
 </nav>
 
 
-<div class="flex min-h-screen mt-6">
+<div class="flex min-h-screen mt-10">
 
  <!-- Left Sidebar (Notices & Birthdays) -->
 <div class="w-1/6 white-900 text-white p-6 space-y-6 rounded-lg shadow-lg mt-10">
@@ -166,7 +166,7 @@ Room Bookings</span>
 </a>
         </div>
         <div class="bg-blue-800 p-6 rounded-lg text-center shadow-lg  transition">
-        <a href="https://chaka.strathmore.edu/phonebill/directory" >
+        <a href="/phone_directory" >
     <span style="color:white">
         <span class="text-lg mr-2">📞</span> <!-- Phone emoji for directory -->
         Phone Directory
