@@ -4,51 +4,45 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-9">
 
                 <!-- Analytical Card 1: Total Notices -->
-                <div class="bg-gradient-to-r from-orange-500 to-orange-700 text-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
-                    <a href="{{ route('notices.index') }}" class="block">
+                <div class="bg-gradient-to-r from-green-500 to-green-700 text-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
                         <h3 class="text-lg font-semibold flex items-center">
                             <i class="fa fa-bell mr-2"></i>Total Notices
                         </h3>
                         <p class="text-3xl font-bold mt-4">{{ $noticesCount }}</p>
-                    </a>
+
                     <p class="mt-2">View and manage all posted notices.</p>
-                    <a href="{{ route('notices.index') }}" class="mt-4 inline-block bg-white text-orange-700 rounded-lg px-4 py-2 hover:bg-orange-100">Go to Notices</a>
+                    <a href="{{ route('notices.index') }}" class="mt-4 inline-block  text-orange-700 rounded-lg px-4 py-2 hover:bg-orange-100">Go to Notices</a>
                 </div>
 
                 <!-- Analytical Card 2: Total Birthdays -->
-                <div class="bg-gradient-to-r from-teal-500 to-teal-700 text-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
-                    <a href="{{ route('birthdays.index') }}" class="block">
+                <div class="bg-gradient-to-r from-red-500 to-red-700 text-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
                         <h3 class="text-lg font-semibold flex items-center">
                             <i class="fa fa-calendar-alt mr-2"></i>Total Birthdays
                         </h3>
                         <p class="text-3xl font-bold mt-4">{{ $birthdaysCount }}</p>
-                    </a>
+
                     <p class="mt-2">Check and manage all birthdays.</p>
-                    <a href="{{ route('birthdays.index') }}" class="mt-4 inline-block bg-white text-teal-700 rounded-lg px-4 py-2 hover:bg-teal-100">Go to Birthdays</a>
+                    <a href="{{ route('birthdays.index') }}" class="mt-4 inline-block bg-blue   px-4 py-2 hover:bg-teal-100">Go to Birthdays</a>
                 </div>
 
                 <!-- Analytical Card 3: Total Users -->
                 <div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
-                    <a href="{{ route('users.index') }}" class="block">
                         <h3 class="text-lg font-semibold flex items-center">
                             <i class="fa fa-users mr-2"></i>Total Users
                         </h3>
                         <p class="text-3xl font-bold mt-4">{{ $usersCount }}</p>
-                    </a>
                     <p class="mt-2">View and manage all registered users.</p>
-                    <a href="{{ route('users.index') }}" class="mt-4 inline-block bg-white text-blue-700 rounded-lg px-4 py-2 hover:bg-blue-100">Go to Users</a>
+                    <a href="{{ route('users.index') }}" class="mt-4 inline-block  text-white-700 rounded-lg px-4 py-2">Go to Users</a>
                 </div>
 
                 <!-- Analytical Card 4: Total Events -->
                 <div class="bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
-                    <a href="{{ route('events.index') }}" class="block">
                         <h3 class="text-lg font-semibold flex items-center">
                             <i class="fa fa-calendar mr-2"></i>Total Events
                         </h3>
                         <p class="text-3xl font-bold mt-4">{{ $eventsCount }}</p>
-                    </a>
                     <p class="mt-2">View and manage all scheduled events.</p>
-                    <a href="{{ route('events.index') }}" class="mt-4 inline-block bg-white text-purple-700 rounded-lg px-4 py-2 hover:bg-purple-100">Go to Events</a>
+                    <a href="{{ route('events.index') }}" class="mt-4 inline-block  text-white-700 rounded-lg px-4 py-2 ">Go to Events</a>
                 </div>
 
             </div>

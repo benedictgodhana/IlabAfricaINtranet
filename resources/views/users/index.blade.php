@@ -10,7 +10,7 @@
             <h2 class="text-2xl font-semibold mb-4">Users</h2>
 
             <a href="{{ route('users.create') }}"
-               class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4 inline-flex items-center">
+               class="px-4 py-2 bg-blue-500 text-white rmb-4 inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>

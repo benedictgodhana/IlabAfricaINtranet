@@ -15,17 +15,17 @@
 
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" name="name" id="name" value="{{ old('name', $birthday->name) }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required>
+                    <input type="text" name="name" id="name" value="{{ old('name', $birthday->name) }}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200" required>
                 </div>
 
                 <div class="mb-4">
                     <label for="birth_date" class="block text-sm font-medium text-gray-700">Birth Date</label>
-                    <input type="date" name="birth_date" id="birth_date" value="{{ old('birth_date', $birthday->birth_date) }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required>
+                    <input type="date" name="birth_date" id="birth_date" value="{{ old('birth_date', $birthday->birth_date) }}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200" required>
                 </div>
 
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" name="email" id="email" value="{{ old('email', $birthday->email) }}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required>
+                    <input type="email" name="email" id="email" value="{{ old('email', $birthday->email) }}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-200" required>
                 </div>
 
                 <div class="flex justify-end">

@@ -1,6 +1,5 @@
 <x-app-layout>
     <div class="container mx-auto my-8">
-        <h1 class="text-3xl font-bold mb-6">Add New Entry</h1>
 
         <form action="{{ route('phones.store') }}" method="POST" class="space-y-6 bg-white p-8 rounded-lg shadow-md">
             @csrf
