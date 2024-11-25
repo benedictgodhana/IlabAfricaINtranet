@@ -18,7 +18,7 @@
     <!-- jQuery and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
+    <style>z
         .tooltip {
     position: absolute;
     z-index: 1000;
@@ -86,10 +86,9 @@
 
 
 
-<div class="flex min-h-screen mt-12">
-
+<div class="flex flex-col lg:flex-row mt-16 px-4 space-y-6 lg:space-y-0 lg:space-x-6">
  <!-- Left Sidebar (Notices & Birthdays) -->
-<div class="w-1/4 white-900 text-white p-6 space-y-6 rounded-lg shadow-lg mt-10">
+<div class="w-1/4 white-900 text-white p-6 space-y-6 rounded-lg  mt-10">
   <!-- Categories Section (optional, add later if needed) -->
 
   <!-- Notice Board Section -->
@@ -123,10 +122,10 @@
 
 
   <!-- Center Content (Systems & Calendar) -->
-  <div class="flex-1 p-6 bg-gray-100 grid grid-cols-3 gap-6 mt-10">
+  <div class="flex-1 p-6 bg-gray-100 grid grid-cols-3 gap-6 mt-16">
 
     <!-- Link Cards Section -->
-    <div class="col-span-3 ">
+    <div class="col-span-3 mt-10">
     <h3 class="text-lg font-semibold text-gray-200 text-center" style="color:navy">Quick Links</h3>
     <br>
 
@@ -220,7 +219,7 @@
  <!-- Right Sidebar (Document Directory) -->
  <div class="w-1/5 bg-white-900 text-white p-6 mt-16">
   <!-- Birthdays Section -->
-  <h3 class="text-lg text-center font-semibold text-gray-200" style="color:navy">Birthdays</h3>
+  <h3 class="text-lg text-center font-semibold text-gray-200 mt-10" style="color:navy">Birthdays</h3>
   <ul class="space-y-4 mt-2">
     @forelse($birthdaysToday as $birthday)
       <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
