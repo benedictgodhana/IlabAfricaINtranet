@@ -22,6 +22,7 @@
                     <option value="HR" {{ $phone->department == 'HR' ? 'selected' : '' }}>HR</option>
                     <option value="IT" {{ $phone->department == 'IT' ? 'selected' : '' }}>IT</option>
                     <option value="Reception" {{ $phone->department == 'IT' ? 'selected' : '' }}>Reception</option>
+                    <option value="E-Health" {{ $phone->department == 'IT' ? 'selected' : '' }}>E-Health</option>
                     <option value="Operations Manager" {{ $phone->department == 'IT' ? 'selected' : '' }}>Operations Manager</option>
                     <option value="IT Outsourcing & BITCU" {{ $phone->department == 'IT Outsourcing & BITCU' ? 'selected' : '' }}>IT Outsourcing & BITCU</option>
                     <option value="Digital Learning" {{ $phone->department == 'Digital Learning' ? 'selected' : '' }}>Digital Learning</option>    <!-- Add more departments as needed -->
