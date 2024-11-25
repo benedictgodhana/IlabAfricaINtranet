@@ -21,6 +21,8 @@
                 <select name="department" id="department" class="mt-2 px-4 py-2 border border-gray-300 rounded-md w-full">
                     <option value="HR" {{ $phone->department == 'HR' ? 'selected' : '' }}>HR</option>
                     <option value="IT" {{ $phone->department == 'IT' ? 'selected' : '' }}>IT</option>
+                    <option value="Reception" {{ $phone->department == 'IT' ? 'selected' : '' }}>Reception</option>
+                    <option value="Operations Manager" {{ $phone->department == 'IT' ? 'selected' : '' }}>Operations Manager</option>
                     <option value="IT Outsourcing & BITCU" {{ $phone->department == 'IT Outsourcing & BITCU' ? 'selected' : '' }}>IT Outsourcing & BITCU</option>
                     <option value="Digital Learning" {{ $phone->department == 'Digital Learning' ? 'selected' : '' }}>Digital Learning</option>    <!-- Add more departments as needed -->
                     <option value="Data Science" {{ $phone->department == 'Data Science' ? 'selected' : '' }}>Data Science</option>    <!-- Add more departments as needed -->

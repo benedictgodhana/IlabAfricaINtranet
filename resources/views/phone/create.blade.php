@@ -28,8 +28,8 @@
                 >
                     <option value="" disabled selected>Select a department</option>
                     <option value="eHealth">eHealth</option>
-                    <option value="eHealth">Reception</option>
-                    <option value="eHealth">Operations Manager</option>
+                    <option value="Reception">Reception</option>
+                    <option value="operations Manager">Operations Manager</option>
                     <option value="IT Outsourcing & BITCU">IT Outsourcing & BITCU</option>
                     <option value="Digital Learning">Digital Learning</option>
                     <option value="Data Science">Data Science</option>
