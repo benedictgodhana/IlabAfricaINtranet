@@ -33,10 +33,12 @@
             align-items: flex-start;
             min-height: 100vh;
             padding-top: 60px; /* Adjust for fixed navbar */
+            max-width: 1500px;
+            width:100%;
         }
 
         .notice-content {
-            width: 60%; /* Center the notice content */
+            width: 40%; /* Center the notice content */
             margin-right: 30px;
             position: fixed;
         }
