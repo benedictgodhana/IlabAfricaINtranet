@@ -45,7 +45,7 @@
     </a>
 
     <!-- Nav Links -->
-    <div class="lg:block">
+    <div class="lg:block hidden">
   <ul class="flex flex-row items-center gap-6">
     <li>
       <a href="/" class="text-sm p-1 text-black hover:text-blue-600">Home</a>
@@ -85,40 +85,44 @@
 </nav>
 
 
-
 <div class="flex flex-col lg:flex-row mt-16 px-4 space-y-6 lg:space-y-0 lg:space-x-6"> <!-- Left Sidebar (Notices & Birthdays) -->
-<div class="w-full lg:w-1/4 white-900 text-white p-6 space-y-6 rounded-lg  mt-10">
-  <!-- Categories Section (optional, add later if needed) -->
+  <div class="w-full lg:w-1/4 white-900 text-white p-6 space-y-6 rounded-lg mt-10">
+    <!-- Categories Section (optional, add later if needed) -->
 
-  <!-- Notice Board Section -->
-  <div>
-    <h3 class="text-lg font-semibold text-gray-200 text-center" style="color:navy">Notice Board</h3>
-    <ul class="space-y-4 mt-2 max-h-58 overflow-y-scroll">
-      @forelse($notices->take(2) as $notice)
-        <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
-          <span class="font-bold text-white">{{ $notice->title }}</span> <!-- Directly access 'title' -->
-          <p class="text-sm mt-2 text-white-500">{!! strip_tags(Str::limit($notice->content, 100)) !!}</p>
-          <br>
-          <p class="text-xs text-white-400">By Benedict Godhana</p>
-          <a href="{{ route('notice.show', $notice->id) }}" class="text-white-400 hover:text-white mt-2 text-center btn btn-primary  inline-block">View Notice</a>
-        </li>
-      @empty
-        <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
-          <span class="font-bold text-white">No Notices Available</span>
-        </li>
-      @endforelse
-    </ul>
+    <!-- Notice Board Section -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-200 text-center" style="color:navy">Notice Board</h3>
+      <ul class="space-y-4 mt-2 max-h-96 overflow-y-auto"> <!-- Apply max height for scrolling -->
+        @foreach($notices->take(2) as $notice) <!-- Display the first 2 notices -->
+          <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
+            <span class="font-bold text-white">{{ $notice->title }}</span> <!-- Directly access 'title' -->
+            <p class="text-sm mt-2 text-white-500">{!! strip_tags(Str::limit($notice->content, 100)) !!}</p>
+            <br>
+            <p class="text-xs text-white-400">By Benedict Godhana</p>
+            <a href="{{ route('notice.show', $notice->id) }}" class="text-white-400 hover:text-white mt-2 text-center btn btn-primary inline-block">View Notice</a>
+          </li>
+        @endforeach
 
-    <!-- Display the remaining notices below -->
-    @if($notices->count() > 2)
-      <a href="#" class=" btn btn-primary  hover:text-white mt-4 block">View More Notices</a>
-    @endif
-</div>
+        <!-- Make the rest scrollable after the first 2 -->
+        @foreach($notices->skip(2) as $notice) <!-- Skip the first 2 and show the rest -->
+          <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
+            <span class="font-bold text-white">{{ $notice->title }}</span>
+            <p class="text-sm mt-2 text-white-500">{!! strip_tags(Str::limit($notice->content, 100)) !!}</p>
+            <br>
+            <p class="text-xs text-white-400">By Benedict Godhana</p>
+            <a href="{{ route('notice.show', $notice->id) }}" class="text-white-400 hover:text-white mt-2 text-center btn btn-primary inline-block">View Notice</a>
+          </li>
+        @endforeach
+      </ul>
+
+      <!-- Display the remaining notices below if any -->
+      @if($notices->count() > 2)
+        <a href="#" class="btn btn-primary hover:text-white mt-4 block">Scroll to view More Notices</a>
+      @endif
+    </div>
+  </div>
 
 
-
-
-</div>
 
 
   <!-- Center Content (Systems & Calendar) -->
