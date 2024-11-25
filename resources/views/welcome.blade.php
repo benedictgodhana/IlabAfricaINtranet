@@ -141,7 +141,7 @@
 </a>
         <a href="https://pnc-pm.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700">
 
-<span style="color:white">    <span class="text-lg mr-2">📊</span> <!-- Bar chart emoji for performance evaluation -->Performance Evaluation</span>
+<span style="color:white">    <span class="text-lg mr-2">📊</span> <!-- Bar chart emoji for performance evaluation -->Performance</span>
 </a>
         <a href="http://tsavo.strathmore.edu/login" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700" >
 
