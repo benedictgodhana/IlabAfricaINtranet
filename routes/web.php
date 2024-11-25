@@ -53,13 +53,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 
 Route::get('/', function () {
     // Fetch all notices from the database
-    $notices = Notice::all()->map(function ($notice) {
-        return [
-            'id' => $notice->id,
-            'content' => $notice->content,
-            'details_link' => route('notice.show', $notice->id) // Generate details link
-        ];
-    });
+    $notices = Notice::all();  // No need to use map
 
     // Get today's date
     $today = Carbon::today()->format('m-d');

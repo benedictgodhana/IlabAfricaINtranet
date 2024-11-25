@@ -94,13 +94,13 @@
   <div>
     <h3 class="text-lg font-semibold text-gray-200 text-center" style="color:navy">Notice Board</h3>
     <ul class="space-y-4 mt-2 max-h-58 overflow-y-scroll">
-      @forelse($notices->take(2) as $notice) <!-- Display only the first 2 notices -->
+      @forelse($notices->take(2) as $notice)
         <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
-          <span class="font-bold text-white">{{ $notice['content'] }}</span>
-          <p class="text-sm mt-2 text-white-500">{{ $notice['content'] }}</p>
+          <span class="font-bold text-white">{{ $notice->title }}</span> <!-- Directly access 'title' -->
+          <p class="text-sm mt-2 text-white-500">{!! strip_tags(Str::limit($notice->content, 100)) !!}</p>
           <br>
           <p class="text-xs text-white-400">By Benedict Godhana</p>
-          <a href="{{ $notice['details_link'] }}" class="text-white-400 hover:text-white mt-2 text-center inline-block">View Notice</a>
+          <a href="{{ route('notice.show', $notice->id) }}" class="text-white-400 hover:text-white mt-2 text-center inline-block">View Notice</a>
         </li>
       @empty
         <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
@@ -114,6 +114,7 @@
       <a href="#" class="text-blue-400 hover:text-white mt-4 block">View More Notices</a>
     @endif
 </div>
+
 
 
 
