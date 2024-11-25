@@ -100,7 +100,7 @@
           <p class="text-sm mt-2 text-white-500">{!! strip_tags(Str::limit($notice->content, 100)) !!}</p>
           <br>
           <p class="text-xs text-white-400">By Benedict Godhana</p>
-          <a href="{{ route('notice.show', $notice->id) }}" class="text-white-400 hover:text-white mt-2 text-center inline-block">View Notice</a>
+          <a href="{{ route('notice.show', $notice->id) }}" class="text-white-400 hover:text-white mt-2 text-center btn btn-primary  inline-block">View Notice</a>
         </li>
       @empty
         <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
@@ -111,7 +111,7 @@
 
     <!-- Display the remaining notices below -->
     @if($notices->count() > 2)
-      <a href="#" class="text-blue-400 hover:text-white mt-4 block">View More Notices</a>
+      <a href="#" class=" btn btn-primary  hover:text-white mt-4 block">View More Notices</a>
     @endif
 </div>
 
