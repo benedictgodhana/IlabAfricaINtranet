@@ -125,7 +125,7 @@
     <div class="notice-content">
     <h1 class="blog-content" style="font-weight:900;font-size:24px">{{ $notice->title }}</h1>
     <br>
-    <p class="blog-content">{!! strip_tags($notice->content) !!}</p>
+    <p class="blog-content">{!! $notice->content !!}</p>
 </div>
 
         <!-- Fixed Comments Section -->
