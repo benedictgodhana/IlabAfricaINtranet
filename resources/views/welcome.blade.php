@@ -86,9 +86,8 @@
 
 
 
-<div class="flex flex-col lg:flex-row mt-16 px-4 space-y-6 lg:space-y-0 lg:space-x-6">
- <!-- Left Sidebar (Notices & Birthdays) -->
-<div class="w-1/4 white-900 text-white p-6 space-y-6 rounded-lg  mt-10">
+<div class="flex flex-col lg:flex-row mt-16 px-4 space-y-6 lg:space-y-0 lg:space-x-6"> <!-- Left Sidebar (Notices & Birthdays) -->
+<div class="w-full lg:w-1/4 white-900 text-white p-6 space-y-6 rounded-lg  mt-10">
   <!-- Categories Section (optional, add later if needed) -->
 
   <!-- Notice Board Section -->
@@ -122,15 +121,14 @@
 
 
   <!-- Center Content (Systems & Calendar) -->
-  <div class="flex-1 p-6 bg-gray-100 grid grid-cols-3 gap-6 mt-16">
-
+  <div class="flex-1 p-6 bg-gray-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
     <!-- Link Cards Section -->
-    <div class="col-span-3 mt-10">
+    <div class="col-span-1 sm:col-span-2 lg:col-span-3 mt-10">
     <h3 class="text-lg font-semibold text-gray-200 text-center" style="color:navy">Quick Links</h3>
     <br>
 
-      <div class="grid grid-cols-3 gap-6">
-      <a href="https://shaba.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700">
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+       <a href="https://shaba.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700">
   <span style="color:white">
     <span class="text-lg mr-2">🏨</span> <!-- Room emoji for room booking -->
     Room Bookings
@@ -217,10 +215,9 @@
 
 
  <!-- Right Sidebar (Document Directory) -->
- <div class="w-1/5 bg-white-900 text-white p-6 mt-16">
-  <!-- Birthdays Section -->
-  <h3 class="text-lg text-center font-semibold text-gray-200 mt-10" style="color:navy">Birthdays</h3>
-  <ul class="space-y-4 mt-2">
+ <div class="w-full lg:w-1/4 text-gray-900 p-6 space-y-6 rounded-lg mt-10">
+    <h3 class="text-lg font-semibold text-gray-200 text-center mt-10" style="color:navy">Birthday List</h3>
+    <ul class="space-y-6 mt-2 max-h-56 overflow-y-scroll">
     @forelse($birthdaysToday as $birthday)
       <li class="bg-blue-800 p-4 rounded-lg shadow-md hover:bg-blue-700 transition">
         <span class="font-bold text-white">{{ $birthday->name }} has a birthday today!</span>
