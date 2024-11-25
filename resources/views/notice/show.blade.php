@@ -8,11 +8,19 @@
     <title>{{ $notice->title }}</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('Template/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('Template/css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
-    <link rel="stylesheet" href="{{ asset('Template/css/style.css') }}">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="{{ asset('pacific-main/css/animate.css') }}">
+<link rel="stylesheet" href="{{ asset('pacific-main/css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('pacific-main/css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ asset('pacific-main/css/magnific-popup.css') }}">
+<link rel="stylesheet" href="{{ asset('pacific-main/css/bootstrap-datepicker.css') }}">
+<link rel="stylesheet" href="{{ asset('pacific-main/css/jquery.timepicker.css') }}">
+<link rel="stylesheet" href="{{ asset('pacific-main/css/flaticon.css') }}">
+<link rel="stylesheet" href="{{ asset('pacific-main/css/style.css') }}">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -115,8 +123,9 @@
 
     <div class="main-container mt-16">
     <div class="notice-content">
-    <h2 class="text-2xl font-bold text-gray-800">{{ $notice->title }}</h2>
-    <p class="text-sm text-gray-600 mt-4">{!! strip_tags($notice->content) !!}</p>
+    <h1 class="blog-content" style="font-weight:900;font-size:24px">{{ $notice->title }}</h1>
+    <br>
+    <p class="blog-content">{!! strip_tags($notice->content) !!}</p>
 </div>
 
         <!-- Fixed Comments Section -->
