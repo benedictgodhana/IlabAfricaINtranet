@@ -109,7 +109,7 @@
             <span class="font-bold text-white">{{ $notice->title }}</span>
             <p class="text-sm mt-2 text-white-500">{!! strip_tags(Str::limit($notice->content, 100)) !!}</p>
             <br>
-            <p class="text-xs text-white-400">By Benedict Godhana</p>
+            <p class="text-xs text-white-400">{{$notice->user->name}}</p>
             <a href="{{ route('notice.show', $notice->id) }}" class="text-white-400 hover:text-white mt-2 text-center btn btn-primary inline-block">View Notice</a>
           </li>
         @endforeach
