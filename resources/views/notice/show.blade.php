@@ -56,7 +56,6 @@
             right: 20px;
             top: 80px; /* Adjust according to navbar height */
             width: 30%;
-            background-color: #f9f9f9;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
