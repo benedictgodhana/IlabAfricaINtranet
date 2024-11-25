@@ -28,6 +28,7 @@
                 >
                     <option value="" disabled selected>Select a department</option>
                     <option value="eHealth">eHealth</option>
+                    <option value="Finance">Finance</option>
                     <option value="Reception">Reception</option>
                     <option value="operations Manager">Operations Manager</option>
                     <option value="IT Outsourcing & BITCU">IT Outsourcing & BITCU</option>
