@@ -280,6 +280,14 @@ body {
         Printers
     </span>
 </a>
+
+<a href="/phone_directory" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700" target="_blank"
+   rel="noopener noreferrer" >
+    <span style="color:white">
+        <span class="text-lg mr-2">📞</span> <!-- Phone emoji for directory -->
+        Phone Directory
+    </span>
+</a>
       </div>
     </div>
 
