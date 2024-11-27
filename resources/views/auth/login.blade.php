@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+      transform: scale(0.6667); /* Scale down by 2/3 */
+      transform-origin: top left;
+      width: 150%;
+      overflow-x: hidden;
+    }
+    </style>
 </head>
 <body class="bg-cover bg-center min-h-screen flex items-center justify-center p-4 bg-gray"
       >
