@@ -53,8 +53,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 
 Route::get('/', function () {
     // Fetch all notices from the database
-    $notices = Notice::all();  // No need to use map
-
+    $notices = Notice::latest()->paginate(3); // 4 notices per page
     // Get today's date
     $today = Carbon::today()->format('m-d');
 
@@ -64,7 +63,7 @@ Route::get('/', function () {
         ->get();
 
     // Fetch all events from the database
-    $events = Event::orderBy('start_time', 'desc')->take(3)->get(['id', 'title', 'start_time', 'end_time', 'organizers', 'venue']);
+    $events = Event::orderBy('start_time', 'desc')->take(3)->get(['id', 'title', 'start_time', 'end_time', 'organizers', 'venue'])->paginate(3);
 
 
     // Pass the notices, birthdays, and events to the 'welcome' view

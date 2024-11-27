@@ -31,6 +31,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+body {
+      transform: scale(0.6667); /* Scale down by 2/3 */
+      transform-origin: top left;
+      width: 150%;
+      overflow-x: hidden;
+    }
 
     </style>
 
@@ -133,52 +139,110 @@
     <br>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
-       <a href="https://shaba.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700">
+       <a href="https://shaba.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700"  target="_blank"
+     rel="noopener noreferrer">
   <span style="color:white">
     <span class="text-lg mr-2">🏨</span> <!-- Room emoji for room booking -->
-    Room Bookings
+    Room Booking System
   </span>
 </a>
 
-        <a href="https://sabuk.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700" >
+        <a href="https://sabuk.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700"  target="_blank"
+     rel="noopener noreferrer" >
 
 <span style="color:white">    <span class="text-lg mr-2">📝</span> <!-- Notepad emoji for feedback -->Feedback System</span>
 </a>
-        <a href="https://pnc-pm.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700">
+        <a href="https://pnc-pm.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700"  target="_blank"
+     rel="noopener noreferrer">
 
 <span style="color:white">    <span class="text-lg mr-2">📊</span> <!-- Bar chart emoji for performance evaluation -->Performance</span>
 </a>
-        <a href="http://tsavo.strathmore.edu/login" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700" >
+        <a href="http://tsavo.strathmore.edu/login" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700"  target="_blank"
+     rel="noopener noreferrer">
 
 <span style="color:white">    <span class="text-lg mr-2">📦</span> <!-- Package emoji for inventory -->Inventory System</span>
 </a>
-        <a href="https://ilabafrica.strathmore.edu/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700">
-
-<span  style="color:white">    <span class="text-lg mr-2">🌐</span> <!-- Globe emoji for website -->ILab Website</span>
-</a>
-        <a href="/phone_directory" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700" >
+        <a href="https://su-sso.strathmore.edu/cas-prd/login?service=https%3A%2F%2Fapps.strathmore.edu%2Fkr%2Fkew%2FEDocLite%3FedlName%3DPaymentRequestForm%26userAction%3Dinitiate"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-green-700">
     <span style="color:white">
-        <span class="text-lg mr-2">📞</span> <!-- Phone emoji for directory -->
-        Phone Directory
+      <span class="text-lg mr-2">💳</span> Payments
     </span>
-</a>
+  </a>
 
-        <a href="https://tudor.strathmore.edu/payroll/d56b699830e77ba53855679cb1d252da/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700" >
+  <!-- Event System -->
+  <a href="https://ebs.strathmore.edu/login"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-purple-700">
+    <span style="color:white">
+      <span class="text-lg mr-2">📅</span> Events Booking
+    </span>
+  </a>
+
+  <!-- Transport -->
+  <a href="https://crs.strathmore.edu/"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-yellow-700">
+    <span style="color:white">
+      <span class="text-lg mr-2">🚌</span> Transport
+    </span>
+  </a>
+
+  <!-- Password Reset -->
+  <a href="https://su-sso.strathmore.edu/staff-pss/private/login"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-red-700">
+    <span style="color:white">
+      <span class="text-lg mr-2">🔒</span> Password Reset
+    </span>
+  </a>
+
+  <!-- PNC HRMS -->
+  <a href="https://tudor.strathmore.edu/hrm/symfony/web/index.php/auth/login"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-teal-700">
+    <span style="color:white">
+      <span class="text-lg mr-2">👩‍💼</span> PNC HRMS
+    </span>
+  </a>
+
+  <!-- Procurement -->
+  <a href="https://apps.strathmore.edu/eprocurement/auth/sign-in"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-orange-700">
+    <span style="color:white">
+      <span class="text-lg mr-2">📦</span> E-Procurement
+    </span>
+  </a>
+
+  <!-- Requisition System -->
+  <a href="https://requisition.example.com"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-indigo-700">
+    <span style="color:white">
+      <span class="text-lg mr-2">📋</span> Requisition System
+    </span>
+  </a>
+
+        <a href="https://tudor.strathmore.edu/payroll/d56b699830e77ba53855679cb1d252da/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700"  target="_blank"
+     rel="noopener noreferrer">
     <span style="color:white">
         <span class="text-lg mr-2">💵</span> <!-- Money emoji for payroll -->
         Payroll
     </span>
 </a>
-        <a href="http://printers.strathmore.edu:8080/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700">
+        <a href="http://printers.strathmore.edu:8080/" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700"  target="_blank"
+     rel="noopener noreferrer">
     <span style="color:white">
         <span class="text-lg mr-2">🖨️</span> <!-- Printer emoji for printers -->
         Printers
-    </span>
-</a>
-        <a href="https://tudor.strathmore.edu/hrm/symfony/web/index.php/auth/login" class="block bg-blue-800 p-6 rounded-lg text-center shadow-lg transition hover:bg-blue-700">
-    <span style="color:white">
-        <span class="text-lg mr-2">🧑‍💼</span> <!-- HR emoji for human resources -->
-        HR
     </span>
 </a>
       </div>
