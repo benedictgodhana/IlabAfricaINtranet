@@ -62,6 +62,24 @@ body {
     <li>
       <a href="/phone_directory" class="text-sm p-1 text-black hover:text-blue-600">Phone Directory</a>
     </li>
+
+    <li class="relative">
+          <button class="text-sm p-1 text-black hover:text-blue-600 focus:outline-none flex items-center gap-2" id="documentsDropdownButton">
+            Documents
+            <!-- Font Awesome Dropdown Icon -->
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            id="documentsDropdown"
+            class="absolute hidden bg-white shadow-lg w-48 rounded-md mt-2 p-2 flex flex-col z-10"
+          >
+            <a href="/policies" class="text-sm text-black hover:text-blue-600 py-2">Our Policies</a>
+            <a href="/forms" class="text-sm text-black hover:text-blue-600 py-2">Request Forms & Docs</a>
+            <a href="/templates" class="text-sm text-black hover:text-blue-600 py-2">Templates</a>
+            <a href="#" class="text-sm text-black hover:text-blue-600 py-2">Presentations</a>
+          </div>
+        </li>
   </ul>
 </div>
 
@@ -84,6 +102,23 @@ body {
         </li>
         <li>
           <a href="/forms" class="text-sm text-black hover:text-blue-600">Forms</a>
+        </li>
+        <li class="relative">
+          <button class="text-sm p-1 text-black hover:text-blue-600 focus:outline-none flex items-center gap-2" id="documentsDropdownButton">
+            Documents
+            <!-- Font Awesome Dropdown Icon -->
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            id="documentsDropdown"
+            class="absolute hidden bg-white shadow-lg w-48 rounded-md mt-2 p-2 flex flex-col z-10"
+          >
+            <a href="/documents/category1" class="text-sm text-black hover:text-blue-600 py-2">Category 1</a>
+            <a href="/documents/category2" class="text-sm text-black hover:text-blue-600 py-2">Category 2</a>
+            <a href="/documents/category3" class="text-sm text-black hover:text-blue-600 py-2">Category 3</a>
+            <a href="/documents/category4" class="text-sm text-black hover:text-blue-600 py-2">Category 4</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -249,17 +284,17 @@ body {
     </div>
 
     <!-- Calendar Section (Placed below the link cards) -->
-    <div class="col-span-3 mb-16">
+    <!-- <div class="col-span-3 mb-16">
   <div class="mb-16">
     <h3 class="text-lg font-semibold text-gray-200 text-center" style="color:navy">Documents</h3>
-    <p class="text-sm mt-2 text-center" style="color:navy">Explore our extensive collection of documents at iLabAfrica!</p>
+    <p class="text-sm mt-2 text-center" style="color:navy">Explore our extensive collection of documents at iLabAfrica!</p> -->
 
-    <div class="grid grid-cols-2 gap-4 mt-4">
+    <!-- <div class="grid grid-cols-2 gap-4 mt-4"> -->
       <!-- <a href="/reports" class="flex items-center p-4 bg-white shadow-md hover:bg-gray-100 transition duration-200">
         <span class="text-lg mr-2">📁</span>
         <span class="text-gray-800">Reports</span>
       </a> -->
-      <a href="/policies" class="flex items-center p-4 bg-white shadow-md hover:bg-gray-100 transition duration-200">
+      <!-- <a href="/policies" class="flex items-center p-4 bg-white shadow-md hover:bg-gray-100 transition duration-200">
         <span class="text-lg mr-2">📁</span>
         <span class="text-gray-800">Our Policies</span>
       </a>
@@ -274,10 +309,10 @@ body {
       <a href="#" class="flex items-center p-4 bg-white shadow-md hover:bg-gray-100 transition duration-200">
         <span class="text-lg mr-2">📁</span>
         <span class="text-gray-800">Presentations</span>
-      </a>
-    </div>
-  </div>
-</div>
+      </a> -->
+    <!-- </div>
+  </div> -->
+<!-- </div> -->
 
 
 </div>
@@ -466,6 +501,13 @@ body {
 
   toggle.addEventListener('click', () => {
     menu.classList.toggle('hidden');
+  });
+
+  const documentsButton = document.getElementById('documentsDropdownButton');
+  const documentsDropdown = document.getElementById('documentsDropdown');
+
+  documentsButton.addEventListener('click', () => {
+    documentsDropdown.classList.toggle('hidden');
   });
 </script>
 </body>
